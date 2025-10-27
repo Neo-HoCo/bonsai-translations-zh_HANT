@@ -1,10 +1,10 @@
 # Traditional Chinese Translation for Bonsai (BlenderBIM)
-Introduction:
+**Introduction:**
 Traditional Chinese localization file (.po) for Bonsai (BlenderBIM).
 
-Localization Author:
-Neo Chen@Ho&Co
+**Localization Author:**
+Neo Chen@[Ho&Co](https://hanhsiho.com/index.html)
 
-Sources:
+**Sources:**
 1. https://docs.bonsaibim.org/guides/development/translations.html
 2. https://github.com/IfcOpenShell/bonsai-translations
