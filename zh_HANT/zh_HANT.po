@@ -124,16 +124,6 @@ msgstr "重新載入 IFC 檔案"
 
 #: bim/operator.py
 msgctxt "Operator"
-msgid "Add IFC File"
-msgstr "新增 IFC 檔案"
-
-#: bim/operator.py
-msgctxt "Operator"
-msgid "Remove IFC File"
-msgstr "移除 IFC 檔案"
-
-#: bim/operator.py
-msgctxt "Operator"
 msgid "Fetch Object Passport"
 msgstr "取得物件履歷"
 
@@ -148,6 +138,11 @@ msgstr "搜尋"
 msgctxt "Operator"
 msgid "Select Entity"
 msgstr "選擇實體"
+
+#: bim/operator.py
+msgctxt "Operator"
+msgid "Select Entity by Guid"
+msgstr "依 Guid 選取實體"
 
 #: bim/operator.py
 msgctxt "Operator"
@@ -192,6 +187,21 @@ msgid "Copy Text To Clipboard"
 msgstr "複製文字到剪貼簿"
 
 #: bim/operator.py
+msgctxt "Operator"
+msgid "System Info"
+msgstr "系統資訊"
+
+#: bim/operator.py
+msgctxt "Operator"
+msgid "Search Attribute Values"
+msgstr "搜尋屬性值"
+
+#: bim/operator.py
+msgctxt "Operator"
+msgid "Add Subitem"
+msgstr "新增子項目"
+
+#: bim/operator.py
 msgid "Switches to the last used tab"
 msgstr "切換到上次使用的分頁"
 
@@ -220,12 +230,28 @@ msgid "Search For Property"
 msgstr "搜尋屬性"
 
 #: bim/operator.py
+msgid "Select entity by guid currently saved to clipboard"
+msgstr "選取目前已儲存於剪貼簿中的 Guid 實體"
+
+#: bim/operator.py
 msgid "Cut selected objects with clipping planes and create cappings"
 msgstr "以裁切平面剖開選取的物件並封閉剖面缺口"
 
 #: bim/operator.py
 msgid "Revert clipping plane cut (switch back to the original mesh)"
 msgstr "還原裁切平面剖面（切換回原始網格）"
+
+#: bim/operator.py
+msgid "Show debug information and copy it to the clipboard."
+msgstr "顯示除錯資訊並複製到剪貼簿。"
+
+#: bim/operator.py
+msgid "Search for attribute values used in the elements of the same IFC class."
+msgstr "搜尋同一 IFC 類別元素中使用的屬性值。"
+
+#: bim/operator.py
+msgid "Add subitem to the current attribute"
+msgstr "新增子項目至目前屬性"
 
 #: bim/operator.py
 msgid "Warning: your model may be damaged."
@@ -240,36 +266,28 @@ msgid "Warning: you may experience errors. Really continue?"
 msgstr "警告：您可能會遇到錯誤，確定要繼續嗎？"
 
 #: bim/operator.py
-msgid "On the next step to create file association "
-msgstr "在下一步建立檔案關聯"
-
-#: bim/operator.py
-msgid "the system console will be opened "
-msgstr "系統主控台將會被開啟"
-
-#: bim/operator.py
-msgid "to create an association."
-msgstr "將建立關聯。"
-
-#: bim/operator.py
 #: bim/ui.py
 msgid "Online IFC Documentation"
 msgstr "線上 IFC 文件"
+
+#: bim/operator.py
+msgid "(The information has been copied to the clipboard.)"
+msgstr "（資訊已複製到剪貼簿。）"
 
 #: bim/operator.py
 msgid "Data Path"
 msgstr "資料路徑"
 
 #: bim/operator.py
+#: bim/module/fm/operator.py
+msgid "File Path"
+msgstr "檔案路徑"
+
+#: bim/operator.py
 #: bim/module/drawing/operator.py
 #: bim/module/project/operator.py
 msgid "Use Relative Path"
 msgstr "使用相對路徑"
-
-#: bim/operator.py
-#: bim/module/fm/operator.py
-msgid "File Path"
-msgstr "檔案路徑"
 
 #: bim/operator.py
 #: bim/module/pset/prop.py
@@ -279,6 +297,14 @@ msgstr "屬性"
 #: bim/operator.py
 msgid "Original Operator Path"
 msgstr "原始操作路徑"
+
+#: bim/operator.py
+msgid "Attribute Name"
+msgstr "屬性名稱"
+
+#: bim/operator.py
+msgid "Attribute IFC Class"
+msgstr "屬性 IFC 類別"
 
 #: bim/operator.py
 msgid "Associations established."
@@ -300,8 +326,6 @@ msgstr "單一檔案路徑"
 #: bim/module/aggregate/operator.py
 #: bim/module/bcf/prop.py
 #: bim/module/brick/prop.py
-#: bim/module/bsdd/prop.py
-#: bim/module/classification/prop.py
 #: bim/module/constraint/prop.py
 #: bim/module/cost/operator.py
 #: bim/module/cost/prop.py
@@ -315,7 +339,6 @@ msgstr "單一檔案路徑"
 #: bim/module/group/prop.py
 #: bim/module/layer/prop.py
 #: bim/module/library/prop.py
-#: bim/module/light/prop.py
 #: bim/module/material/operator.py
 #: bim/module/material/ui.py
 #: bim/module/model/prop.py
@@ -337,7 +360,6 @@ msgstr "單一檔案路徑"
 #: bim/module/system/prop.py
 #: bim/module/tester/prop.py
 #: bim/module/type/operator.py
-#: bim/module/unit/prop.py
 #: bim/module/void/prop.py
 msgid "Name"
 msgstr "名稱"
@@ -364,20 +386,16 @@ msgid "Is Null"
 msgstr "空值"
 
 #: bim/prop.py
-msgid "Is Optional"
-msgstr "可選擇"
-
-#: bim/prop.py
-msgid "Is Uri"
-msgstr "為 URI"
-
-#: bim/prop.py
 #: bim/module/drawing/prop.py
 #: bim/module/project/prop.py
 #: bim/module/search/prop.py
 #: bim/module/sequence/prop.py
 msgid "Is Selected"
 msgstr "已選擇"
+
+#: bim/prop.py
+msgid "Is Optional"
+msgstr "可選擇"
 
 #: bim/prop.py
 msgid "Special Value Type"
@@ -450,6 +468,7 @@ msgstr "索引"
 #: bim/prop.py
 #: bim/module/bcf/prop.py
 #: bim/module/brick/ui.py
+#: bim/module/clash/ui.py
 #: bim/module/cost/operator.py
 #: bim/module/sequence/operator.py
 #: bim/module/sequence/prop.py
@@ -564,6 +583,7 @@ msgid "Mesh Checksum"
 msgstr "網格校驗碼"
 
 #: bim/prop.py
+#: bim/module/bsdd/prop.py
 #: bim/module/pset/prop.py
 msgid "Pset"
 msgstr "屬性集(Pset)"
@@ -665,7 +685,6 @@ msgstr "幾何體"
 
 #: bim/ui.py
 #: bim/module/bsdd/prop.py
-#: bim/module/clash/prop.py
 #: bim/module/sequence/ui.py
 #: bim/module/tester/prop.py
 msgctxt "Operator"
@@ -903,6 +922,11 @@ msgid "Visit Community"
 msgstr "造訪社群"
 
 #: bim/ui.py
+msgid "bSDD:"
+msgstr "bSDD："
+
+#: bim/ui.py
+#: bim/module/attribute/ui.py
 #: bim/module/augin/ui.py
 #: bim/module/bcf/ui.py
 #: bim/module/boundary/ui.py
@@ -1031,6 +1055,18 @@ msgstr "牆軸"
 #: bim/ui.py
 msgid "Slab Direction"
 msgstr "樓板方向"
+
+#: bim/ui.py
+msgid "Bounding Box Dimensions"
+msgstr "邊界框尺寸"
+
+#: bim/ui.py
+msgid "Cut Decorator"
+msgstr "剖面修飾器"
+
+#: bim/ui.py
+msgid "Fill Cut Decorator"
+msgstr "填滿剖面修飾器"
 
 #: bim/ui.py
 msgid "Bonsai Target Selection"
@@ -1269,6 +1305,31 @@ msgid "Copy Attribute To Selection"
 msgstr "複製屬性至選取項目"
 
 #: bim/module/attribute/operator.py
+msgctxt "Operator"
+msgid "Add Entity"
+msgstr "新增實體"
+
+#: bim/module/attribute/operator.py
+msgctxt "Operator"
+msgid "Enable Editing Entity"
+msgstr "啟用編輯實體"
+
+#: bim/module/attribute/operator.py
+msgctxt "Operator"
+msgid "Disable Editing Entity"
+msgstr "停用編輯實體"
+
+#: bim/module/attribute/operator.py
+msgctxt "Operator"
+msgid "Edit Entity"
+msgstr "編輯實體"
+
+#: bim/module/attribute/operator.py
+msgctxt "Operator"
+msgid "Show Explorer UI"
+msgstr "顯示瀏覽器介面"
+
+#: bim/module/attribute/operator.py
 msgid "ALT + Left Click to enable editing attributes on all selected objects"
 msgstr "ALT + 左鍵點擊以啟用編輯所有選取物件的屬性"
 
@@ -1285,8 +1346,16 @@ msgid "Regenerate GlobalId\n\nSHIFT+CLICK to regenerate GlobalIds for all select
 msgstr "重新產生 GlobalId\n\nSHIFT+點擊以重新產生所有選取物件的 GlobalId"
 
 #: bim/module/attribute/operator.py
+msgid "Show Explorer UI to select element as attribute value or edit it."
+msgstr "顯示瀏覽器介面以選取元素作為屬性值或編輯元素。"
+
+#: bim/module/attribute/operator.py
 msgid "Use All Selected Objects"
 msgstr "使用所有選取物件"
+
+#: bim/module/attribute/operator.py
+msgid "No entity selected."
+msgstr "未選取實體。"
 
 #: bim/module/attribute/prop.py
 #: bim/module/attribute/ui.py
@@ -1303,6 +1372,11 @@ msgid "Is Editing Attributes"
 msgstr "正在編輯屬性"
 
 #: bim/module/attribute/ui.py
+msgctxt "Operator"
+msgid "Explorer"
+msgstr "瀏覽器"
+
+#: bim/module/attribute/ui.py
 #: bim/module/boundary/ui.py
 #: bim/module/project/ui.py
 msgid "Save Attributes"
@@ -1315,6 +1389,10 @@ msgstr "儲存屬性"
 #: bim/module/sequence/ui.py
 msgid "Edit"
 msgstr "編輯"
+
+#: bim/module/attribute/ui.py
+msgid "Explorer UI is not Loaded."
+msgstr "瀏覽器介面尚未載入。"
 
 #: bim/module/augin/operator.py
 msgctxt "Operator"
@@ -1941,10 +2019,6 @@ msgid "INVALID PROFILE"
 msgstr "無效的輪廓"
 
 #: bim/module/boundary/operator.py
-msgid "Please set an active container to detect space boundaries from."
-msgstr "請設定一個啟用中的容器以偵測空間邊界。"
-
-#: bim/module/boundary/operator.py
 msgid "Please select one or two IFC elements."
 msgstr "請選取一或兩個 IFC 元件。"
 
@@ -2358,26 +2432,39 @@ msgstr "載入 bSDD 字典"
 
 #: bim/module/bsdd/operator.py
 msgctxt "Operator"
-msgid "Set bSDD Dictionary as active"
-msgstr "將 bSDD 字典設為啟用中"
-
-#: bim/module/bsdd/operator.py
-msgctxt "Operator"
 msgid "Search bSDD Class"
 msgstr "搜尋 bSDD 類別"
 
 #: bim/module/bsdd/operator.py
 msgctxt "Operator"
-msgid "Search bSDD Class Properties"
-msgstr "搜尋 bSDD 類別屬性"
+msgid "Import bSDD Classes"
+msgstr "匯入 bSDD 類別"
+
+#: bim/module/bsdd/operator.py
+msgctxt "Operator"
+msgid "Search bSDD Properties"
+msgstr "搜尋 bSDD 屬性"
+
+#: bim/module/bsdd/operator.py
+msgctxt "Operator"
+msgid "Add bSDD Properties"
+msgstr "新增 bSDD 屬性"
 
 #: bim/module/bsdd/operator.py
 msgid "Search for bSDD classes by the provided keyword"
 msgstr "依提供的關鍵字搜尋 bSDD 類別"
 
 #: bim/module/bsdd/operator.py
-msgid "Search for bSDD class properties for the currently selected class"
-msgstr "搜尋目前選取類別的 bSDD 類別屬性"
+msgid "Load bSDD classes that apply to the current element"
+msgstr "載入適用於目前元素的 bSDD 類別"
+
+#: bim/module/bsdd/operator.py
+msgid "Search for bSDD properties that apply to the current element"
+msgstr "搜尋適用於目前元素的 bSDD 屬性"
+
+#: bim/module/bsdd/operator.py
+msgid "Add selected bSDD properties to the active object"
+msgstr "將選取的 bSDD 屬性新增至作用物件"
 
 #: bim/module/bsdd/prop.py
 #: bim/module/bsdd/ui.py
@@ -2398,32 +2485,32 @@ msgid "Reference Code"
 msgstr "參考代碼"
 
 #: bim/module/bsdd/prop.py
-msgid "Namespace URI"
-msgstr "命名空間 URI"
+msgid "Dictionary Name"
+msgstr "字典名稱"
 
 #: bim/module/bsdd/prop.py
-msgid "Domain Name"
-msgstr "網域名稱"
+msgid "Dictionary Namespace URI"
+msgstr "字典命名空間 URI"
 
 #: bim/module/bsdd/prop.py
-msgid "Domain Namespace URI"
-msgstr "網域命名空間 URI"
+msgid "Code"
+msgstr "代碼"
 
 #: bim/module/bsdd/prop.py
-msgid "Active Domain"
-msgstr "啟用中的網域"
+msgid "Active Dictionary"
+msgstr "使用中字典"
 
 #: bim/module/bsdd/prop.py
 msgid "Active URI"
 msgstr "啟用中的 URI"
 
 #: bim/module/bsdd/prop.py
-msgid "Domains"
-msgstr "網域"
+msgid "Dictionaries"
+msgstr "字典"
 
 #: bim/module/bsdd/prop.py
-msgid "Active Domain Index"
-msgstr "啟用中的網域索引"
+msgid "Active Dictionary Index"
+msgstr "使用中字典索引"
 
 #: bim/module/bsdd/prop.py
 #: bim/module/classification/prop.py
@@ -2434,6 +2521,22 @@ msgstr "分類"
 #: bim/module/bsdd/prop.py
 msgid "Active Classification Index"
 msgstr "啟用中的分類索引"
+
+#: bim/module/bsdd/prop.py
+msgid "Classes"
+msgstr "類別"
+
+#: bim/module/bsdd/prop.py
+msgid "Active Class Index"
+msgstr "使用中類別索引"
+
+#: bim/module/bsdd/prop.py
+msgid "Active Property Index"
+msgstr "使用中屬性索引"
+
+#: bim/module/bsdd/prop.py
+msgid "Selected Properties"
+msgstr "選取的屬性"
 
 #: bim/module/bsdd/prop.py
 msgid "Keyword"
@@ -2449,18 +2552,8 @@ msgid "buildingSMART Data Dictionary"
 msgstr "buildingSMART 資料字典"
 
 #: bim/module/bsdd/ui.py
-#: bim/module/classification/ui.py
-msgid "Active: "
-msgstr "啟用中："
-
-#: bim/module/bsdd/ui.py
-#: bim/module/classification/ui.py
-msgid "No Active bSDD Domain"
-msgstr "無啟用中的 bSDD 網域"
-
-#: bim/module/bsdd/ui.py
-msgid "Selected domain:"
-msgstr "選取的網域："
+msgid "Selected Dictionary:"
+msgstr "選取目錄："
 
 #: bim/module/bsdd/ui.py
 msgid "Open bSDD In Browser"
@@ -2727,29 +2820,16 @@ msgid "Select filepath for smart-grouped clashes."
 msgstr "選取智慧分組碰撞的檔案路徑。"
 
 #: bim/module/clash/operator.py
-msgid "Execute clash detection and save the information to a .bcf or .json file"
-msgstr "執行碰撞檢查並將資訊儲存至 .bcf 或 .json 檔案"
-
-#: bim/module/clash/operator.py
 msgid "Select the clashing IFC geometry stored in a file"
 msgstr "選取儲存在檔案中的碰撞 IFC 幾何"
 
 #: bim/module/clash/operator.py
-#: bim/module/cost/operator.py
-msgid "Format"
-msgstr "格式"
-
-#: bim/module/clash/operator.py
-msgid "Finished IFC clash."
-msgstr "完成 IFC 碰撞。"
+msgid "IFC Clash completed and results are loaded."
+msgstr "IFC 衝突檢查已完成，結果已載入。"
 
 #: bim/module/clash/operator.py
 msgid "No clashes found for the selected Clash Set."
 msgstr "未找到選取碰撞集的碰撞。"
-
-#: bim/module/clash/prop.py
-msgid "File"
-msgstr "檔案"
 
 #: bim/module/clash/prop.py
 #: bim/module/csv/prop.py
@@ -2870,12 +2950,20 @@ msgid "Smart Clash Manager"
 msgstr "智慧碰撞管理器"
 
 #: bim/module/clash/ui.py
-msgid "Group A:"
-msgstr "群組 A："
+msgid "#"
+msgstr "#"
 
 #: bim/module/clash/ui.py
-msgid "Group B:"
-msgstr "群組 B："
+msgid "Group A Element"
+msgstr "群組 A 元素"
+
+#: bim/module/clash/ui.py
+msgid "Group B Element"
+msgstr "群組 B 元素"
+
+#: bim/module/clash/ui.py
+msgid "Clashes Are Not Loaded"
+msgstr "衝突尚未載入"
 
 #: bim/module/clash/ui.py
 msgid "Select clash results to group:"
@@ -3016,6 +3104,10 @@ msgstr "有參考"
 #: bim/module/system/prop.py
 msgid "Is Adding"
 msgstr "正在新增"
+
+#: bim/module/classification/prop.py
+msgid "Classification Source"
+msgstr "分類來源"
 
 #: bim/module/classification/prop.py
 msgid "Available Classifications"
@@ -3398,6 +3490,16 @@ msgstr "匯入成本明細表 CSV"
 
 #: bim/module/cost/operator.py
 msgctxt "Operator"
+msgid "Refresh Cost Schedule CSV"
+msgstr "重新整理成本明細表 CSV"
+
+#: bim/module/cost/operator.py
+msgctxt "Operator"
+msgid "Remove CSV Link"
+msgstr "移除 CSV 連結"
+
+#: bim/module/cost/operator.py
+msgctxt "Operator"
 msgid "Add Cost Column"
 msgstr "新增成本欄"
 
@@ -3410,6 +3512,11 @@ msgstr "移除成本欄"
 msgctxt "Operator"
 msgid "Load Cost Item Quantities"
 msgstr "載入成本項目數量"
+
+#: bim/module/cost/operator.py
+msgctxt "Operator"
+msgid "Info about the assigned cost item rate"
+msgstr "指派的成本項目費率資訊"
 
 #: bim/module/cost/operator.py
 msgctxt "Operator"
@@ -3455,6 +3562,11 @@ msgstr "計算成本項目資源值"
 msgctxt "Operator"
 msgid "Export Cost Schedule"
 msgstr "匯出成本明細表"
+
+#: bim/module/cost/operator.py
+msgctxt "Operator"
+msgid "Export Cost Schedule to PDF"
+msgstr "匯出成本明細表為 PDF"
 
 #: bim/module/cost/operator.py
 msgctxt "Operator"
@@ -3570,8 +3682,16 @@ msgid "Disable editing cost item quantity"
 msgstr "停用編輯成本項目數量"
 
 #: bim/module/cost/operator.py
-msgid "Import cost schdule from the provided .csv file."
+msgid "Import cost schedule from the provided .csv file."
 msgstr "從提供的 .csv 檔案匯入成本明細表。"
+
+#: bim/module/cost/operator.py
+msgid "Refresh cost schedule data from the associated CSV file"
+msgstr "從關聯的 CSV 檔案重新整理成本明細表資料"
+
+#: bim/module/cost/operator.py
+msgid "Remove the link to the CSV file and delete the related document reference"
+msgstr "移除與 CSV 檔案的連結並刪除相關文件參照"
 
 #: bim/module/cost/operator.py
 msgid "Assign cost rate value to active cost item"
@@ -3582,13 +3702,21 @@ msgid "Calculate cost item value based on it's resources. Any previous cost valu
 msgstr "根據其資源計算成本項目值。任何先前的成本值都將被移除"
 
 #: bim/module/cost/operator.py
-msgid "Export a cost schedule to a CSV, XSLX OR ODS file"
-msgstr "將成本明細表匯出為 CSV、XSLX 或 ODS 檔案"
+msgid "Export current/all cost schedules as CSV, XSLX or ODS files to the provided directory."
+msgstr "將目前／所有成本明細表匯出為 CSV、XSLX 或 ODS 檔案至指定目錄。"
+
+#: bim/module/cost/operator.py
+msgid "Print chosen cost schedule to pdf."
+msgstr "將選擇的成本明細表列印為 PDF。"
 
 #: bim/module/cost/operator.py
 #: bim/module/sequence/operator.py
 msgid "Object type"
 msgstr "物件類型"
+
+#: bim/module/cost/operator.py
+msgid "Description:"
+msgstr "描述："
 
 #: bim/module/cost/operator.py
 msgid "Choose a format"
@@ -3599,8 +3727,20 @@ msgid "Select a directory."
 msgstr "選取目錄。"
 
 #: bim/module/cost/operator.py
+msgid "Select Ifc Cost Schedule:"
+msgstr "選取 IFC 成本明細表："
+
+#: bim/module/cost/operator.py
+msgid "Export properties:"
+msgstr "匯出屬性："
+
+#: bim/module/cost/operator.py
 msgid "Is Schedule Of Rates"
 msgstr "為費率表"
+
+#: bim/module/cost/operator.py
+msgid "Format"
+msgstr "格式"
 
 #: bim/module/cost/prop.py
 #: bim/module/group/prop.py
@@ -3842,6 +3982,14 @@ msgid "No Cost Schedules found."
 msgstr "找不到成本明細表。"
 
 #: bim/module/cost/ui.py
+msgid "Linked CSV:"
+msgstr "已連結的 CSV："
+
+#: bim/module/cost/ui.py
+msgid "No CSV file found"
+msgstr "未找到 CSV 檔案"
+
+#: bim/module/cost/ui.py
 #: bim/module/sequence/ui.py
 msgid "Schedule tools"
 msgstr "明細表工具"
@@ -3959,6 +4107,10 @@ msgstr "數量"
 #: bim/module/cost/ui.py
 msgid "Total Cost"
 msgstr "總成本"
+
+#: bim/module/cost/ui.py
+msgid "Rate"
+msgstr "費率"
 
 #: bim/module/cost/ui.py
 msgid "-"
@@ -4823,6 +4975,10 @@ msgid "Select Document Objects"
 msgstr "選取文件物件"
 
 #: bim/module/document/operator.py
+msgid "Assign active document to the selected objects."
+msgstr "將使用中文件指派給選取的物件。"
+
+#: bim/module/document/operator.py
 msgid "Document ID"
 msgstr "文件 ID"
 
@@ -4917,7 +5073,7 @@ msgstr "開啟圖紙配置"
 
 #: bim/module/drawing/operator.py
 msgctxt "Operator"
-msgid "Select All Sheetss"
+msgid "Select All Sheets"
 msgstr "選取所有圖紙"
 
 #: bim/module/drawing/operator.py
@@ -4959,16 +5115,6 @@ msgstr "啟用模型"
 msgctxt "Operator"
 msgid "Activate Drawing"
 msgstr "啟用圖面"
-
-#: bim/module/drawing/operator.py
-msgctxt "Operator"
-msgid "Select Documentation IFC File"
-msgstr "選取文件 IFC 檔案"
-
-#: bim/module/drawing/operator.py
-msgctxt "Operator"
-msgid "Resize Text"
-msgstr "調整文字大小"
 
 #: bim/module/drawing/operator.py
 msgctxt "Operator"
@@ -5049,16 +5195,6 @@ msgstr "移除參考"
 msgctxt "Operator"
 msgid "Open Reference"
 msgstr "開啟參考"
-
-#: bim/module/drawing/operator.py
-msgctxt "Operator"
-msgid "Add Drawing Style Attribute"
-msgstr "新增圖面樣式屬性"
-
-#: bim/module/drawing/operator.py
-msgctxt "Operator"
-msgid "Remove Drawing Style Attribute"
-msgstr "移除圖面樣式屬性"
 
 #: bim/module/drawing/operator.py
 msgctxt "Operator"
@@ -5192,8 +5328,8 @@ msgstr "選取指派的產品"
 
 #: bim/module/drawing/operator.py
 msgctxt "Operator"
-msgid "Enable Editing Element Filter"
-msgstr "啟用編輯元件篩選器"
+msgid "Element Filter Mode"
+msgstr "元素篩選模式"
 
 #: bim/module/drawing/operator.py
 msgctxt "Operator"
@@ -5214,10 +5350,6 @@ msgstr "轉換 SVG 為 DXF"
 msgctxt "Operator"
 msgid "Open Documentation Web UI"
 msgstr "開啟文件 Web UI"
-
-#: bim/module/drawing/operator.py
-msgid "Add a drawing view to the IFC project"
-msgstr "新增圖面視圖至 IFC 專案"
 
 #: bim/module/drawing/operator.py
 msgid "Make a copy of currently selected drawing"
@@ -5245,27 +5377,23 @@ msgstr "從圖紙移除目前選取的圖面"
 
 #: bim/module/drawing/operator.py
 msgid "Select all drawings in the drawing list.\n\n" + "SHIFT+CLICK to deselect all drawings"
-msgstr "選取圖面清單中的所有圖面。\n\nSHIFT" + "點擊以取消選取所有圖面"
-
-#: bim/module/drawing/operator.py
-msgid "Activate the model view, hide all annotations"
-msgstr "啟用模型視圖，隱藏所有註解"
-
-#: bim/module/drawing/operator.py
-msgid "Selection .ifc file for documentation."
-msgstr "選取 .ifc 檔案以供文件使用。"
+msgstr "選取圖面清單中的所有圖面。\n\n" + "SHIFT+點擊以取消選取所有圖面"
 
 #: bim/module/drawing/operator.py
 msgid "Remove currently selected drawing.\n\n" + "SHIFT+CLICK to remove all selected drawings"
-msgstr "移除目前選取的圖面。\n\nSHIFT" + "點擊以移除所有選取的圖面"
+msgstr "移除目前選取的圖面。\n\n" + "SHIFT+點擊以移除所有選取的圖面"
 
 #: bim/module/drawing/operator.py
-msgid "Reload drawing styles for the active camera"
-msgstr "為啟用中的相機重新載入圖面樣式"
+msgid "Reload drawing styles for the active camera from the related JSON file."
+msgstr "從相關的 JSON 檔案重新載入使用中攝影機的繪圖樣式。"
 
 #: bim/module/drawing/operator.py
-msgid "Save current render setting to currently selected drawing style. Also resaves styles data to IFC"
-msgstr "將目前的渲染設定儲存至目前選取的圖面樣式。同時將樣式資料重新儲存至 IFC"
+msgid "Save current render settings to currently selected drawing style. Also resaves styles data to IFC"
+msgstr "將目前的渲染設定儲存到目前選取的繪圖樣式，同時也將樣式資料重新儲存到 IFC"
+
+#: bim/module/drawing/operator.py
+msgid "Save current drawing styles settings to IFC and JSON."
+msgstr "將目前的繪圖樣式設定儲存到 IFC 和 JSON。"
 
 #: bim/module/drawing/operator.py
 msgid "Remove currently selected sheet"
@@ -5356,8 +5484,8 @@ msgid "Load the saved drawings in this IFC project"
 msgstr "載入此 IFC 專案中儲存的圖面"
 
 #: bim/module/drawing/operator.py
-msgid "\nSHIFT+CLICK to expand all view categories "
-msgstr "\nSHIFT+點擊以展開所有視圖類別 "
+msgid "\nSHIFT+CLICK to expand all view categories"
+msgstr "\nSHIFT+點擊以展開所有視圖類別"
 
 #: bim/module/drawing/operator.py
 msgid "\n\nSHIFT+CLICK to hide all view categories"
@@ -5372,8 +5500,8 @@ msgid "Select the product this element is assigned to"
 msgstr "選取此元件指派的產品"
 
 #: bim/module/drawing/operator.py
-msgid "Enable editing options for the include or exclude filter"
-msgstr "啟用包含或排除篩選器的編輯選項"
+msgid "Saves the filter"
+msgstr "儲存篩選條件"
 
 #: bim/module/drawing/operator.py
 msgid "Add or import reference image to the IFC project"
@@ -5416,20 +5544,16 @@ msgid "Should Duplicate Annotations"
 msgstr "應複製註解"
 
 #: bim/module/drawing/operator.py
-msgid "Print All"
-msgstr "全部列印"
-
-#: bim/module/drawing/operator.py
-msgid "Open in Viewer"
-msgstr "在檢視器中開啟"
-
-#: bim/module/drawing/operator.py
 msgid "Open All"
 msgstr "全部開啟"
 
 #: bim/module/drawing/operator.py
 msgid "Create All"
 msgstr "全部建立"
+
+#: bim/module/drawing/operator.py
+msgid "Open in Viewer"
+msgstr "在檢視器中開啟"
 
 #: bim/module/drawing/operator.py
 msgid "Should View From Camera"
@@ -5448,8 +5572,8 @@ msgid "Convert All"
 msgstr "全部轉換"
 
 #: bim/module/drawing/operator.py
-msgid "Not a BIM camera"
-msgstr "非 BIM 相機"
+msgid "No active drawing."
+msgstr "沒有使用中圖紙。"
 
 #: bim/module/drawing/operator.py
 msgid "The drawing must be generated before adding to a sheet."
@@ -5472,16 +5596,12 @@ msgid "The schedule must be generated before adding to a sheet."
 msgstr "明細表必須在新增至圖紙前產生。"
 
 #: bim/module/drawing/operator.py
-msgid "Some sheets svg files are missing:\n"
-msgstr "部分圖紙的 svg 檔案遺失：\n"
+msgid "One of the selected objects must be IfcAnnotation."
+msgstr "選取的物件其中之一必須是 IfcAnnotation。"
 
 #: bim/module/drawing/prop.py
 msgid "Property Key"
 msgstr "屬性鍵"
-
-#: bim/module/drawing/prop.py
-msgid "Target View"
-msgstr "目標視圖"
 
 #: bim/module/drawing/prop.py
 msgid "Is Drawing"
@@ -5494,18 +5614,6 @@ msgstr "為圖紙"
 #: bim/module/drawing/prop.py
 msgid "Reference Type"
 msgstr "參考類型"
-
-#: bim/module/drawing/prop.py
-msgid "Raster Style"
-msgstr "點陣樣式"
-
-#: bim/module/drawing/prop.py
-msgid "Include Query"
-msgstr "包含查詢"
-
-#: bim/module/drawing/prop.py
-msgid "Exclude Query"
-msgstr "排除查詢"
 
 #: bim/module/drawing/prop.py
 msgid "Use Underlay Cache"
@@ -5565,10 +5673,6 @@ msgid "Active Sheet Index"
 msgstr "啟用中的圖紙索引"
 
 #: bim/module/drawing/prop.py
-msgid "IFCs"
-msgstr "IFCs"
-
-#: bim/module/drawing/prop.py
 msgid "Drawing Styles"
 msgstr "圖面樣式"
 
@@ -5619,18 +5723,6 @@ msgstr "英制精度"
 #: bim/module/drawing/prop.py
 msgid "A tolerance used when selecting objects"
 msgstr "選取物件時使用的公差"
-
-#: bim/module/drawing/prop.py
-msgid "Underlay"
-msgstr "底圖"
-
-#: bim/module/drawing/prop.py
-msgid "Linework"
-msgstr "線稿"
-
-#: bim/module/drawing/prop.py
-msgid "Annotation"
-msgstr "註解"
 
 #: bim/module/drawing/prop.py
 #: bim/module/root/operator.py
@@ -5691,10 +5783,6 @@ msgid "Exclude Filter"
 msgstr "排除篩選器"
 
 #: bim/module/drawing/prop.py
-msgid "Enable Props Auto Update"
-msgstr "啟用屬性自動更新"
-
-#: bim/module/drawing/prop.py
 msgid "IFC definition ID"
 msgstr "IFC 定義 ID"
 
@@ -5751,6 +5839,10 @@ msgstr "無啟用中的圖面"
 #: bim/module/drawing/ui.py
 msgid "This is not a BIM camera."
 msgstr "這不是 BIM 相機。"
+
+#: bim/module/drawing/ui.py
+msgid "Underlay render might crash if VRAM requirement is not met."
+msgstr "如果 VRAM 需求未達標，底圖渲染可能會當機。"
 
 #: bim/module/drawing/ui.py
 msgid "Depth"
@@ -6122,8 +6214,8 @@ msgstr "IFC 移動聚合"
 
 #: bim/module/geometry/operator.py
 msgctxt "Operator"
-msgid "IFC Move"
-msgstr "IFC 移動"
+msgid "IFC Move Select"
+msgstr "IFC 移動選取"
 
 #: bim/module/geometry/operator.py
 msgctxt "Operator"
@@ -6146,6 +6238,11 @@ msgid "Unassign Representation Layer"
 msgstr "取消指派幾何表達圖層"
 
 #: bim/module/geometry/operator.py
+msgctxt "Operator"
+msgid "IFC Create Instance"
+msgstr "IFC 建立實例"
+
+#: bim/module/geometry/operator.py
 msgid "Create and move a new linked aggregate"
 msgstr "建立並移動新的連結聚合"
 
@@ -6166,12 +6263,24 @@ msgid "Will remove the style from all selected objects"
 msgstr "將從所有選取物件中移除樣式"
 
 #: bim/module/geometry/operator.py
+msgid "Import representation items for the active object."
+msgstr "匯入使用中物件的表現項目。"
+
+#: bim/module/geometry/operator.py
 msgid "Update item attributes in IFC and reload mesh for representation item"
 msgstr "更新 IFC 中的項目屬性並為幾何表達項目重新載入網格"
 
 #: bim/module/geometry/operator.py
 msgid "Add name to existing unnamed profile"
 msgstr "為現有的未命名輪廓新增名稱"
+
+#: bim/module/geometry/operator.py
+msgid "Move selected items.\n\nAutomatically select all parts of an aggregate/nesting to move."
+msgstr "移動選取項目。\n\n自動選取聚合/巢狀結構的所有部分以進行移動。"
+
+#: bim/module/geometry/operator.py
+msgid "Select items for IFC Move Aggregate."
+msgstr "選取項目以進行 IFC 聚合移動。"
 
 #: bim/module/geometry/operator.py
 msgid "Edit presentation layer for the active representation item."
@@ -6188,6 +6297,10 @@ msgstr "指派表達圖層至啟用中的幾何表達。"
 #: bim/module/geometry/operator.py
 msgid "Unassign presentation layer from the active representation."
 msgstr "取消指派啟用中幾何表達的表達圖層。"
+
+#: bim/module/geometry/operator.py
+msgid "Create an instance of the type associated with the selected object"
+msgstr "建立與選取物件關聯類型的實例"
 
 #: bim/module/geometry/operator.py
 msgid "Enable Faster Deletion"
@@ -6220,6 +6333,14 @@ msgstr "擠出項目物件名稱"
 #: bim/module/geometry/operator.py
 msgid "Shape"
 msgstr "形狀"
+
+#: bim/module/geometry/operator.py
+msgid "IFC Separate is not yet supported for EDIT mode with IFC elements."
+msgstr "編輯模式下尚未支援 IFC 元素的 IFC 分離功能。"
+
+#: bim/module/geometry/operator.py
+msgid "Separate by selection requires 'EDIT_MESH' mode."
+msgstr "依選取分離需在「EDIT_MESH」模式下執行。"
 
 #: bim/module/geometry/operator.py
 msgid "No object is selected to copy a representation from."
@@ -6280,6 +6401,22 @@ msgstr "未提供輪廓名稱"
 #: bim/module/geometry/operator.py
 msgid "Select an item to apply the half space solid to."
 msgstr "選取要套用半空間實體的項目。"
+
+#: bim/module/geometry/operator.py
+msgid "Select exactly one object to create an instance of its type"
+msgstr "請僅選取一個物件以建立其類型的實例"
+
+#: bim/module/geometry/operator.py
+msgid "Selected object is not an IFC element"
+msgstr "選取的物件不是 IFC 元素"
+
+#: bim/module/geometry/operator.py
+msgid "Selected object has no associated type"
+msgstr "選取的物件沒有關聯的類型"
+
+#: bim/module/geometry/operator.py
+msgid "You must be using the Multiobject Tool or the relevant editing tool"
+msgstr "必須使用多物件工具或相關編輯工具"
 
 #: bim/module/geometry/prop.py
 msgid "Surface Style"
@@ -6396,54 +6533,6 @@ msgstr "廠商解決方案"
 #: bim/module/geometry/ui.py
 msgid "Discard Changes"
 msgstr "捨棄變更"
-
-#: bim/module/geometry/ui.py
-msgid "IFC Selection"
-msgstr "IFC 選取"
-
-#: bim/module/geometry/ui.py
-msgid "IFC By Material"
-msgstr "IFC 依材質"
-
-#: bim/module/geometry/ui.py
-msgid "IFC By Loose Parts"
-msgstr "IFC 依鬆散零件"
-
-#: bim/module/geometry/ui.py
-msgid "Selection"
-msgstr "選取"
-
-#: bim/module/geometry/ui.py
-msgid "By Material"
-msgstr "依材質"
-
-#: bim/module/geometry/ui.py
-msgid "By Loose Parts"
-msgstr "依鬆散零件"
-
-#: bim/module/geometry/ui.py
-msgid "Blender Separate"
-msgstr "Blender 分離"
-
-#: bim/module/geometry/ui.py
-msgid "IFC Geometry to Origin"
-msgstr "IFC 幾何至原點"
-
-#: bim/module/geometry/ui.py
-msgid "IFC Origin to Geometry"
-msgstr "IFC 原點至幾何"
-
-#: bim/module/geometry/ui.py
-msgid "IFC Origin to 3D Cursor"
-msgstr "IFC 原點至 3D 游標"
-
-#: bim/module/geometry/ui.py
-msgid "IFC Origin to Center of Mass (Surface)"
-msgstr "IFC 原點至質心 (表面)"
-
-#: bim/module/geometry/ui.py
-msgid "IFC Origin to Center of Mass (Volume)"
-msgstr "IFC 原點至質心 (體積)"
 
 #: bim/module/geometry/ui.py
 msgid "No Representations Found"
@@ -7034,10 +7123,6 @@ msgid "Mode"
 msgstr "模式"
 
 #: bim/module/group/prop.py
-msgid "JSON String"
-msgstr "JSON 字串"
-
-#: bim/module/group/prop.py
 msgid "Tree Depth"
 msgstr "樹狀深度"
 
@@ -7058,6 +7143,10 @@ msgstr "啟用中的群組索引"
 #: bim/module/group/prop.py
 msgid "Active Group Id"
 msgstr "啟用中的群組 ID"
+
+#: bim/module/group/prop.py
+msgid "JSON String"
+msgstr "JSON 字串"
 
 #: bim/module/group/ui.py
 msgid "Save Group"
@@ -7143,13 +7232,18 @@ msgctxt "Operator"
 msgid "Install Git"
 msgstr "安裝 Git"
 
+#: bim/module/ifcgit/operator.py
+msgctxt "Operator"
+msgid "Git Diff"
+msgstr "Git 差異（Diff）"
+
 #: bim/module/ifcgit/prop.py
 msgid "List of revision tags"
 msgstr "修訂標籤清單"
 
 #: bim/module/ifcgit/prop.py
 msgid "List of git items"
-msgstr "git 項目清單"
+msgstr "Git 項目清單"
 
 #: bim/module/ifcgit/prop.py
 msgid "Index for my_list"
@@ -7437,6 +7531,17 @@ msgid "View From Sun"
 msgstr "從太陽視角檢視"
 
 #: bim/module/light/operator.py
+msgctxt "Operator"
+msgid "Pick Coordinates"
+msgstr "選取座標"
+
+#: bim/module/light/operator.py
+#: bim/module/light/ui.py
+msgctxt "Operator"
+msgid "Now"
+msgstr "現在"
+
+#: bim/module/light/operator.py
 #: bim/module/light/ui.py
 msgctxt "Operator"
 msgid "Refresh IFC Materials"
@@ -7490,6 +7595,10 @@ msgstr "將太陽路徑的視覺化移至 3D 游標"
 #: bim/module/light/operator.py
 msgid "Views your model as if you were looking from the perspective of the sun"
 msgstr "從太陽的視角檢視您的模型"
+
+#: bim/module/light/operator.py
+msgid "Set time to current local time."
+msgstr "將時間設定為目前的本地時間。"
 
 #: bim/module/light/operator.py
 msgid "Refresh the list of IFC materials for mapping"
@@ -7550,14 +7659,6 @@ msgid "Sites"
 msgstr "場地"
 
 #: bim/module/light/prop.py
-msgid "Latitude"
-msgstr "緯度"
-
-#: bim/module/light/prop.py
-msgid "Longitude"
-msgstr "經度"
-
-#: bim/module/light/prop.py
 msgid "Timezone"
 msgstr "時區"
 
@@ -7613,6 +7714,18 @@ msgid "Solar Access / Shadow"
 msgstr "日照權/陰影"
 
 #: bim/module/light/ui.py
+msgid "There was a problem importing Pyradiance"
+msgstr "匯入 Pyradiance 時發生問題"
+
+#: bim/module/light/ui.py
+msgid "and it's functionality is not available."
+msgstr "其功能目前無法使用。"
+
+#: bim/module/light/ui.py
+msgid "See system console logs at Bonsai startup."
+msgstr "請參閱 Bonsai 啟動時的系統主控台日誌。"
+
+#: bim/module/light/ui.py
 msgid "Info: Unmapped materials default to white"
 msgstr "資訊：未對應的材質預設為白色"
 
@@ -7655,6 +7768,10 @@ msgstr "啟用 '太陽位置' 附加元件以繼續"
 #: bim/module/light/ui.py
 msgid "No Sites With Lat/Longs Found"
 msgstr "未找到帶有緯度/經度的場地"
+
+#: bim/module/light/ui.py
+msgid "Pick"
+msgstr "選取"
 
 #: bim/module/light/ui.py
 msgid "Shadow Intensity"
@@ -8071,6 +8188,10 @@ msgid "Draw System Arrows"
 msgstr "繪製系統箭頭"
 
 #: bim/module/misc/operator.py
+msgid "No other mesh objects selected besides the cutter object."
+msgstr "除了裁切物件外，沒有選取其他網格物件。"
+
+#: bim/module/misc/operator.py
 msgid "No sinks/sources found for selected objects."
 msgstr "未找到選取物件的匯入/匯出點。"
 
@@ -8200,12 +8321,10 @@ msgid "Please set a default container to create the covering in."
 msgstr "請設定一個預設容器以在其中建立覆蓋物。"
 
 #: bim/module/model/decorator.py
-#: bim/module/project/decorator.py
 msgid "d: "
 msgstr "d: "
 
 #: bim/module/model/decorator.py
-#: bim/module/project/decorator.py
 msgid "a: "
 msgstr "a: "
 
@@ -8261,6 +8380,10 @@ msgstr "將外部參數化幾何套用至啟用中的物件。"
 msgctxt "Operator"
 msgid "Grid"
 msgstr "網格"
+
+#: bim/module/model/grid.py
+msgid "Add IfcGrid."
+msgstr "新增 IfcGrid。"
 
 #: bim/module/model/grid.py
 msgid "U Spacing"
@@ -8359,8 +8482,8 @@ msgstr "新增布林運算"
 
 #: bim/module/model/opening.py
 msgctxt "Operator"
-msgid "Show"
-msgstr "顯示"
+msgid "Show Openings"
+msgstr "顯示開口"
 
 #: bim/module/model/opening.py
 msgctxt "Operator"
@@ -8402,8 +8525,8 @@ msgid "Applies a boolean to the selected IFC object using the other selected ble
 msgstr "使用另一個選取的 blender 物件作為空隙，對選取的 IFC 物件套用布林運算"
 
 #: bim/module/model/opening.py
-msgid "Show Openings"
-msgstr "顯示開口"
+msgid "Show openings for selected objects"
+msgstr "顯示選取物件的開口"
 
 #: bim/module/model/opening.py
 msgid "Show objects that are not part of the object or its openings as transparent"
@@ -8522,10 +8645,6 @@ msgstr "沿著鏡射平面，透過一個啟用中的空物件對選取的物件
 msgid "You need to select a type."
 msgstr "您需要選取一個類型。"
 
-#: bim/module/model/product.py
-msgid "Please select atleast 2 objects."
-msgstr "請至少選取 2 個物件。"
-
 #: bim/module/model/profile.py
 msgctxt "Operator"
 msgid "Extend Profile"
@@ -8600,8 +8719,21 @@ msgid "Boundary Class"
 msgstr "邊界類別"
 
 #: bim/module/model/prop.py
+#: bim/module/model/workspace.py
 msgid "Offset"
 msgstr "偏移"
+
+#: bim/module/model/prop.py
+msgid "Previous Gizmo Orientation Type"
+msgstr "上一個 Gizmo 方向類型"
+
+#: bim/module/model/prop.py
+msgid "Previous Gizmo Translate"
+msgstr "上一個 Gizmo 平移"
+
+#: bim/module/model/prop.py
+msgid "Measure XYZ Dimensions"
+msgstr "測量 XYZ 尺寸"
 
 #: bim/module/model/prop.py
 msgid "Count"
@@ -9257,6 +9389,11 @@ msgstr "延伸牆至牆"
 
 #: bim/module/model/wall.py
 msgctxt "Operator"
+msgid "Extend Walls To Polyline Point"
+msgstr "將牆延伸至聚合線點"
+
+#: bim/module/model/wall.py
+msgctxt "Operator"
 msgid "Align Wall"
 msgstr "對齊牆"
 
@@ -9279,6 +9416,11 @@ msgstr "合併牆"
 msgctxt "Operator"
 msgid "Recalculate Wall"
 msgstr "重新計算牆"
+
+#: bim/module/model/wall.py
+msgctxt "Operator"
+msgid "Offset Walls"
+msgstr "偏移牆"
 
 #: bim/module/model/wall.py
 msgctxt "Operator"
@@ -9316,6 +9458,10 @@ msgstr "更新選取物件的角度。"
 #: bim/module/model/wall.py
 msgid "Update length for the selected objects."
 msgstr "更新選取物件的長度。"
+
+#: bim/module/model/wall.py
+msgid "Offset selected objects from their reference line."
+msgstr "將選取的物件從其參考線偏移。"
 
 #: bim/module/model/wall.py
 #: bim/module/structural/ui.py
@@ -9541,7 +9687,7 @@ msgid "Create and edit point source, direction source, and security lighting"
 msgstr "建立與編輯點光源、方向光源和安全照明"
 
 #: bim/module/model/workspace.py
-msgid "Create and edit electric appliances, including dishwasher, electric cooker, freezer, fridge freezer, microwave, refrigerator, kitchen machines, vending machines, washing machines, as well as freestanding electric heaters, fans, water heaters, and water coolers."
+msgid "Create and edit electric appliances, including dishwasher, electric cooker, freezer, fridge freezer, microwave, refrigerator, kitchen machines, vending water heaters, and water coolers."
 msgstr "建立與編輯電器，包括洗碗機、電爐、冷凍櫃、冷藏冷凍櫃、微波爐、冰箱、廚房機器、自動販賣機、洗衣機，以及獨立式電暖器、風扇、熱水器和飲水機。"
 
 #: bim/module/model/workspace.py
@@ -9948,6 +10094,31 @@ msgctxt "Operator"
 msgid "Unassign Actor"
 msgstr "取消指派參與者"
 
+#: bim/module/owner/operator.py
+msgctxt "Operator"
+msgid "Remove Application"
+msgstr "移除應用程式"
+
+#: bim/module/owner/operator.py
+msgctxt "Operator"
+msgid "Enable Editing Application"
+msgstr "啟用編輯應用程式"
+
+#: bim/module/owner/operator.py
+msgctxt "Operator"
+msgid "Disable Editing Application"
+msgstr "停用編輯應用程式"
+
+#: bim/module/owner/operator.py
+msgctxt "Operator"
+msgid "Edit Application"
+msgstr "編輯應用程式"
+
+#: bim/module/owner/operator.py
+msgctxt "Operator"
+msgid "Add Application"
+msgstr "新增應用程式"
+
 #: bim/module/owner/prop.py
 msgid "Active Person Id"
 msgstr "啟用中的人員 ID"
@@ -10045,6 +10216,16 @@ msgid "Owner History"
 msgstr "所有權歷史"
 
 #: bim/module/owner/ui.py
+msgctxt "Operator"
+msgid "Actors"
+msgstr "參與者"
+
+#: bim/module/owner/ui.py
+msgctxt "Operator"
+msgid "Applications"
+msgstr "應用程式"
+
+#: bim/module/owner/ui.py
 msgid "Roles"
 msgstr "角色"
 
@@ -10067,6 +10248,10 @@ msgstr "未找到使用者。"
 #: bim/module/owner/ui.py
 msgid "No Actors Found"
 msgstr "未找到參與者"
+
+#: bim/module/owner/ui.py
+msgid "No Applications Found"
+msgstr "未找到應用程式"
 
 #: bim/module/patch/operator.py
 msgctxt "Operator"
@@ -10559,8 +10744,8 @@ msgid "Supported formats for export:"
 msgstr "支援的匯出格式："
 
 #: bim/module/project/operator.py
-msgid ".ifc, .ifczip, .ifcjson"
-msgstr ".ifc, .ifczip, .ifcjson"
+msgid ","
+msgstr ","
 
 #: bim/module/project/operator.py
 msgid "Assume Unique By Name"
@@ -10979,20 +11164,12 @@ msgid "Purge Unused Openings in Selected Objects"
 msgstr "清除選取物件中未使用的開口"
 
 #: bim/module/project/ui.py
-msgid "Materials: "
-msgstr "材質："
-
-#: bim/module/project/ui.py
 msgid "Purge Unused"
 msgstr "清除未使用"
 
 #: bim/module/project/ui.py
 msgid "Merge Identical"
 msgstr "合併相同"
-
-#: bim/module/project/ui.py
-msgid "Styles: "
-msgstr "樣式："
 
 #: bim/module/project/workspace.py
 msgctxt "Operator"
@@ -11070,13 +11247,13 @@ msgstr "複製屬性至選取項目"
 
 #: bim/module/pset/operator.py
 msgctxt "Operator"
-msgid "Add Edit Rule"
-msgstr "新增編輯規則"
+msgid "Add Property to Edit"
+msgstr "新增要編輯的屬性"
 
 #: bim/module/pset/operator.py
 msgctxt "Operator"
-msgid "Remove Property to Be Renamed"
-msgstr "移除要重新命名的屬性"
+msgid "Remove Property from Editing"
+msgstr "從編輯中移除屬性"
 
 #: bim/module/pset/operator.py
 msgctxt "Operator"
@@ -11113,8 +11290,12 @@ msgid "Add Quantity Take Off"
 msgstr "新增工程數量計算"
 
 #: bim/module/pset/operator.py
-msgid "Rename parameters that are subclasses of IfcElement"
-msgstr "重新命名屬於 IfcElement 子類別的參數"
+msgid "Rename pset properties for all IfcElements"
+msgstr "重新命名所有 IfcElements 的 pset 屬性"
+
+#: bim/module/pset/operator.py
+msgid "Edit pset properties for selected objects."
+msgstr "編輯選取物件的屬性集(psets)屬性。"
 
 #: bim/module/pset/operator.py
 msgid "Bulk remove psets from selected objects"
@@ -11131,10 +11312,6 @@ msgstr "範本檔案"
 #: bim/module/pset/operator.py
 msgid "Custom Tooltip Description"
 msgstr "自訂工具提示描述"
-
-#: bim/module/pset/operator.py
-msgid "Finished applying changes"
-msgstr "完成套用變更"
 
 #: bim/module/pset/operator.py
 msgid "No template files found. You can create one in Property Set Templates UI."
@@ -11190,6 +11367,10 @@ msgstr "範本類型"
 #: bim/module/pset/prop.py
 msgid "Enum Values"
 msgstr "列舉值"
+
+#: bim/module/pset/prop.py
+msgid "Pset to Remove"
+msgstr "要移除的屬性集(Pset)"
 
 #: bim/module/pset/prop.py
 msgid "Pset Filter"
@@ -11285,6 +11466,14 @@ msgstr "而應從參數化幾何 UI 進行編輯。"
 #: bim/module/pset/ui.py
 msgid "No Properties"
 msgstr "無屬性"
+
+#: bim/module/pset/ui.py
+msgid "No bSDD Props Found"
+msgstr "未找到 bSDD 屬性"
+
+#: bim/module/pset/ui.py
+msgid "No Results"
+msgstr "無結果"
 
 #: bim/module/pset/ui.py
 msgid "Occurrence Properties:"
@@ -12100,12 +12289,16 @@ msgid "Search IFC elements by the provided query and add them to the current sel
 msgstr "依提供的查詢搜尋 IFC 元件並將其新增至目前選取項目。"
 
 #: bim/module/search/operator.py
-msgid "Save search filter to an IFC group"
-msgstr "將搜尋篩選器儲存至 IFC 群組"
-
-#: bim/module/search/operator.py
 msgid "Load search filter from an IFC group"
 msgstr "從 IFC 群組載入搜尋篩選器"
+
+#: bim/module/search/operator.py
+msgid "Color all visible objects by the provided property."
+msgstr "依據所提供的屬性為所有可見物件著色。"
+
+#: bim/module/search/operator.py
+msgid "Select objects based on currently selected colored property value."
+msgstr "根據目前選取的著色屬性值選取物件。"
 
 #: bim/module/search/operator.py
 msgid "Save colourscheme to an IFC group"
@@ -12114,10 +12307,6 @@ msgstr "將色彩配置儲存至 IFC 群組"
 #: bim/module/search/operator.py
 msgid "Load colourscheme from an IFC group"
 msgstr "從 IFC 群組載入色彩配置"
-
-#: bim/module/search/operator.py
-msgid "Select objects with a similar value\n\n" + "SHIFT+CLICK display the sum of all selected objects"
-msgstr "選取具有相似值的物件\n\n" + "SHIFT+點擊以顯示所有選取物件的總和"
 
 #: bim/module/search/operator.py
 msgid "Select All"
@@ -12136,12 +12325,20 @@ msgid "Calculated Sum"
 msgstr "計算總和"
 
 #: bim/module/search/operator.py
+msgid "Error occurred trying save search."
+msgstr "儲存搜尋時發生錯誤。"
+
+#: bim/module/search/operator.py
 msgid "No Query Provided"
 msgstr "未提供查詢"
 
 #: bim/module/search/operator.py
 msgid "Set Global ID for search."
 msgstr "設定搜尋的 Global ID。"
+
+#: bim/module/search/operator.py
+msgid "No valid reference values found."
+msgstr "未找到有效的參考值。"
 
 #: bim/module/search/prop.py
 #: bim/module/spatial/prop.py
@@ -12214,10 +12411,6 @@ msgstr "篩選層級"
 #: bim/module/search/prop.py
 msgid "Filter Level Index"
 msgstr "篩選層級索引"
-
-#: bim/module/search/prop.py
-msgid "Flat Colours"
-msgstr "平面顏色"
 
 #: bim/module/search/ui.py
 msgctxt "Operator"
@@ -12800,10 +12993,6 @@ msgid "Include Time"
 msgstr "包含時間"
 
 #: bim/module/sequence/operator.py
-msgid "No statuses selected."
-msgstr "未選取狀態。"
-
-#: bim/module/sequence/operator.py
 msgid "Assigning process control is not yet supported"
 msgstr "尚不支援指派流程控制"
 
@@ -12879,11 +13068,6 @@ msgstr "啟用中的工作計畫 ID"
 #: bim/module/sequence/ui.py
 msgid "Work Schedules"
 msgstr "工作排程"
-
-#: bim/module/sequence/prop.py
-#: bim/module/spatial/operator.py
-msgid "Is Visible"
-msgstr "可見"
 
 #: bim/module/sequence/prop.py
 msgid "Is Enabled"
@@ -13510,6 +13694,18 @@ msgid "SHIFT + Click to add container to selection\nALT + Click to remove contai
 msgstr "SHIFT + 點擊以新增容器至選取項目\nALT + 點擊以從選取項目移除容器"
 
 #: bim/module/spatial/operator.py
+msgid "Recurvisevly selects all objects in the container.\n\nCtrl+click to select only one level deep"
+msgstr "遞迴選取容器中的所有物件。\n\n按住 Ctrl 並點擊可僅選取一層深度"
+
+#: bim/module/spatial/operator.py
+msgid "Contract the hierarchy\nALT+CLICK to recursively contract"
+msgstr "收合階層\n按住 ALT 並點擊可遞迴收合"
+
+#: bim/module/spatial/operator.py
+msgid "Expand the hierarchy\nALT+CLICK to recursively contract"
+msgstr "展開階層\n按住 ALT 並點擊可遞迴收合"
+
+#: bim/module/spatial/operator.py
 msgid "Toggle children\nALT+CLICK to recursively toggle children"
 msgstr "切換子項\nALT+點擊以遞迴切換子項"
 
@@ -13528,6 +13724,10 @@ msgstr "顯示或隱藏空間元件，例如建築物、場地等"
 #: bim/module/spatial/operator.py
 msgid "Should Filter"
 msgstr "應篩選"
+
+#: bim/module/spatial/operator.py
+msgid "Is Visible"
+msgstr "可見"
 
 #: bim/module/spatial/operator.py
 msgid "No non-spatial objects are selected."
@@ -15080,6 +15280,18 @@ msgstr "停用編輯單位"
 msgctxt "Operator"
 msgid "Edit Unit"
 msgstr "編輯單位"
+
+#: bim/module/unit/operator.py
+msgid "Add new units based on the current Blender scene units and assign them as project default."
+msgstr "依據目前 Blender 場景的單位新增新單位，並將其設定為專案預設值。"
+
+#: bim/module/unit/operator.py
+msgid "Assign provided unit as the default project unit for it's unit type."
+msgstr "將所提供的單位指派為其單位類型的專案預設單位。"
+
+#: bim/module/unit/operator.py
+msgid "Unassign the specified unit as the project default."
+msgstr "取消指定單位作為專案預設值的設定。"
 
 #: bim/module/unit/operator.py
 msgid "Open the loaded units"
